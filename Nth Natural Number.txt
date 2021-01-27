@@ -1,0 +1,20 @@
+link - https://practice.geeksforgeeks.org/problems/nth-natural-number/1/?track=30-DOC-day-2&batchId=320
+ //intuition - the problem is to convert base10 to base9
+class Solution{
+	public:
+    	long long findNth(long long N)
+    {
+        // code here.
+        long long ans=0;
+        long long p =1;
+        
+        while(N>0){
+            ans +=p*(N%9);
+            N=N/9;
+            p*=10;
+        }
+        return ans;
+        
+        
+    }
+};
